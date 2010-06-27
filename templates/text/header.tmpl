@@ -1,0 +1,78 @@
+#*
+-*- coding: UTF-8 -*-
+vim: ai ts=2 sts=2 et sw=2
+Copyright 2009 - Jorge A Gallegos (kad@blegh.net)
+*#
+## Import the filters and gettext modules for transformation/translation
+#from filters import text as f
+#from gettext import gettext as _
+#if "middle" in $name.keys()
+$f.h1("%s %s %s - %s" % ($name.given, $name.middle, $name.family, $_("Resume")))
+#else
+$f.h1("%s %s - %s" % ($name.given, $name.family, $_("Resume")))
+#end if
+## Addresses
+#for $address in $addresses
+$_("Address"):
+    > $address.address  
+    > $address.city, $address.state, $address.zip  
+    > $_("Home Phone: %s" % $address.phone.home)  
+  #if "mobile" in $address.phone.keys()
+    > $_("Mobile Phone: %s" % $address.phone.mobile)  
+  #end if
+  #if "fax" in $address.phone.keys()
+    > $_("Fax Number: %s" % $address.phone.fax)  
+  #end if
+#end for
+
+##Contact information
+#if $varExists("contact")
+$f.h2(_("Electronic Contact Information"))
+
+  #if "email" in $contact.keys()
+    #for $email in $contact.email
+  * $_("Email address: <%s>" % $email)
+    #end for
+  #end if
+  #if "web" in $contact.keys()
+  * $_("Web address: %s" % $contact.web)
+  #end if
+  #if "im" in $contact.keys()
+    #for $provider, $handle in $contact.im.items()
+  * $_("%s Instant Messaging: %s" % ($provider.capitalize(), $handle))
+    #end for
+  #end if
+#end if
+
+## Personal information section
+$f.h2("Personal Information")
+
+  * $_("Date of Birth: %s" % $birth.date)
+#if "city" in $birth.keys()
+  #set $loc = $birth.city + ", "
+#end if
+#if "state" in $birth.keys()
+  #set $loc += $birth.state + ", "
+#end if
+#set $loc += $birth.country
+  * $_("Birth Location: %s" % $loc)
+
+## Citizenship(s)
+$_("Current legitimate citizenship(s):")
+
+#for $c in $citizenships
+  * $c
+#end for
+
+## Work permission(s)
+$_("Current countries with work permission:")
+
+#for $wp in $permits
+  #set $sp = ""
+  #if "sponsorship" in $wp.keys()
+    #if $wp.sponsorship
+      #set $sp = $_("(Needs sponsorship from hiring company)")
+    #end if
+  #end if
+  * $_("Able to work in %s due to %s %s" % ($wp.country, $wp.type, $sp))
+#end for

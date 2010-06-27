@@ -1,0 +1,27 @@
+#*
+-*- coding: UTF-8 -*-
+vim: ai ts=2 sts=2 et sw=2
+Copyright 2009 - Jorge A Gallegos (kad@blegh.net)
+*#
+## Import the filters and gettext modules for transformation/translation
+#from filters import text as f
+#from gettext import gettext as _
+
+
+$f.h2(_("Job History"))
+#for $job in $jobs:
+
+$_("Worked at %s" % $f.bold($job.company)) #slurp
+  #if "type" in $job.keys()
+$_("as a %s " % $f.emp($job.type)) #slurp
+  #end if
+$_("From %s to %s." % ($f.emp($job.started), $f.emp($job.finished))) #slurp
+$_("Having the following list of relevant positions/duties:")
+  #for $position in $job.positions
+
+  * $_("Duties as %s:" % $f.bold($position.name))
+    #for $i in xrange(1, len($position.duties) + 1)
+    $i. $position.duties.pop(0)
+    #end for
+  #end for
+#end for

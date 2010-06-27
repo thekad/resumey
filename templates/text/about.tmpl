@@ -1,0 +1,20 @@
+#*
+-*- coding: UTF-8 -*-
+vim: ai ts=2 sts=2 et sw=2
+Copyright 2009 - Jorge A Gallegos (kad@blegh.net)
+*#
+## Import the filters and gettext modules for transformation/translation
+#from filters import text as f
+#from gettext import gettext as _
+
+#if $varExists("goal")
+$f.h2(_("About me"))
+
+$_("My goal in life is")
+
+  > $f.emp($goal)
+#end if
+#if $varExists("cover")
+
+  > $cover
+#end if

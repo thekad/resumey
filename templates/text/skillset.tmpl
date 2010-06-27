@@ -1,0 +1,18 @@
+#*
+-*- coding: UTF-8 -*-
+vim: ai ts=2 sts=2 et sw=2
+Copyright 2009 - Jorge A Gallegos (kad@blegh.net)
+*#
+## Import the filters and gettext modules for transformation/translation
+#from filters import text as f
+#from gettext import gettext as _
+
+$f.h2(_("List of skills and level"))
+
+#for $skill in $skills
+  * $f.bold($skill.name): #slurp
+#if "level" in $skill.keys()
+$skill.level #slurp
+#end if
+$_("(Started using it %s year(s) ago)" % $skill.years)
+#end for

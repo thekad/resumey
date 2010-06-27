@@ -1,0 +1,278 @@
+# Translations template for Resumey.
+# Copyright (C) 2009 Jorge A Gallegos <kad@blegh.net>
+# This file is distributed under the same license as the Resumey project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: kad@blegh.net\n"
+"POT-Creation-Date: 2009-03-28 12:07-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.4\n"
+
+#: resumey.py:71
+msgid "You need to specify an existing file"
+msgstr ""
+
+#: resumey.py:85
+msgid "You should first call set_output()"
+msgstr ""
+
+#: resumey.py:86
+#, python-format
+msgid "Tags are %s"
+msgstr ""
+
+#: resumey.py:100
+#, python-format
+msgid "Can't export to '%s' format"
+msgstr ""
+
+#: resumey.py:117
+msgid "YAML file where your resume lives"
+msgstr ""
+
+#: resumey.py:121
+msgid "Output file/directory"
+msgstr ""
+
+#: resumey.py:123
+msgid "CSS File to be embedded (only for HTML)"
+msgstr ""
+
+#: resumey.py:125
+msgid "Enable logging"
+msgstr ""
+
+#: resumey.py:127
+msgid "Comma separated list of tags to filter on"
+msgstr ""
+
+#: resumey.py:132
+msgid "Please specify an input YAML file"
+msgstr ""
+
+#: exporters/exporter.py:35
+#, python-format
+msgid "Format is %s"
+msgstr ""
+
+#: exporters/exporter.py:38
+#, python-format
+msgid "Template path is %s"
+msgstr ""
+
+#: exporters/exporter.py:57
+#, python-format
+msgid "Will write to %s"
+msgstr ""
+
+#: exporters/exporter.py:59
+#, python-format
+msgid "No write access to '%s'"
+msgstr ""
+
+#: exporters/text.py:36
+msgid "Parsing header section"
+msgstr ""
+
+#: exporters/text.py:40
+msgid "Looping through addresses"
+msgstr ""
+
+#: exporters/text.py:63
+msgid "Parsing the about section"
+msgstr ""
+
+#: exporters/text.py:87
+msgid "Parsing the academics section"
+msgstr ""
+
+#: exporters/text.py:103
+msgid "Parsing the skillset list"
+msgstr ""
+
+#: exporters/text.py:129
+msgid "Parsing the job history"
+msgstr ""
+
+#: exporters/text.py:137
+msgid "Present day"
+msgstr ""
+
+#: exporters/text.py:162
+msgid "Parsing additional info section"
+msgstr ""
+
+#: templates/txt/about.tmpl:11
+msgid "About me"
+msgstr ""
+
+#: templates/txt/about.tmpl:13
+msgid "My goal in life is"
+msgstr ""
+
+#: templates/txt/academics.tmpl:10
+msgid "Academics:"
+msgstr ""
+
+#: templates/txt/academics.tmpl:14
+#, python-format
+msgid "Level: %s"
+msgstr ""
+
+#: templates/txt/academics.tmpl:15
+#, python-format
+msgid "School: %s"
+msgstr ""
+
+#: templates/txt/academics.tmpl:17
+#, python-format
+msgid "Major: %s"
+msgstr ""
+
+#: templates/txt/academics.tmpl:27
+#, python-format
+msgid "Location: %s "
+msgstr ""
+
+#: templates/txt/additional.tmpl:10
+msgid "Additional Information"
+msgstr ""
+
+#: templates/txt/additional.tmpl:13
+msgid "Personal/Side Projects"
+msgstr ""
+
+#: templates/txt/additional.tmpl:17
+#, python-format
+msgid "%s for %s (<%s>): %s"
+msgstr ""
+
+#: templates/txt/additional.tmpl:28
+#, python-format
+msgid "During the %s on %s by %s for: %s"
+msgstr ""
+
+#: templates/txt/additional.tmpl:34
+msgid "Personal Hobbies"
+msgstr ""
+
+#: templates/txt/additional.tmpl:43
+#, python-format
+msgid "Copyright &copy; %(holder)s, %(year)s"
+msgstr ""
+
+#: templates/txt/additional.tmpl:46
+msgid "Created with Resumey <https://launchpad.net/resumey>"
+msgstr ""
+
+#: templates/txt/header.tmpl:10 templates/txt/header.tmpl:12
+msgid "Resume"
+msgstr ""
+
+#: templates/txt/header.tmpl:16
+msgid "Address"
+msgstr ""
+
+#: templates/txt/header.tmpl:19
+#, python-format
+msgid "Home Phone: %s"
+msgstr ""
+
+#: templates/txt/header.tmpl:21
+#, python-format
+msgid "Mobile Phone: %s"
+msgstr ""
+
+#: templates/txt/header.tmpl:24
+#, python-format
+msgid "Fax Number: %s"
+msgstr ""
+
+#: templates/txt/header.tmpl:30
+msgid "Electronic Contact Information"
+msgstr ""
+
+#: templates/txt/header.tmpl:34
+#, python-format
+msgid "Email address: <%s>"
+msgstr ""
+
+#: templates/txt/header.tmpl:38
+#, python-format
+msgid "Web address: %s"
+msgstr ""
+
+#: templates/txt/header.tmpl:42
+#, python-format
+msgid "%s Instant Messaging: %s"
+msgstr ""
+
+#: templates/txt/header.tmpl:50
+#, python-format
+msgid "Date of Birth: %s"
+msgstr ""
+
+#: templates/txt/header.tmpl:58
+#, python-format
+msgid "Birth Location: %s"
+msgstr ""
+
+#: templates/txt/header.tmpl:61
+msgid "Current legitimate citizenship(s):"
+msgstr ""
+
+#: templates/txt/header.tmpl:68
+msgid "Current countries with work permission:"
+msgstr ""
+
+#: templates/txt/header.tmpl:77
+#, python-format
+msgid "Able to work in %s due to %s %s"
+msgstr ""
+
+#: templates/txt/jobs.tmpl:11
+msgid "Job History"
+msgstr ""
+
+#: templates/txt/jobs.tmpl:14
+#, python-format
+msgid "Worked at %s"
+msgstr ""
+
+#: templates/txt/jobs.tmpl:16
+#, python-format
+msgid "as a %s "
+msgstr ""
+
+#: templates/txt/jobs.tmpl:18
+#, python-format
+msgid "From %s to %s."
+msgstr ""
+
+#: templates/txt/jobs.tmpl:19
+msgid "Having the following list of relevant positions/duties:"
+msgstr ""
+
+#: templates/txt/jobs.tmpl:22
+#, python-format
+msgid "Duties as %s:"
+msgstr ""
+
+#: templates/txt/skillset.tmpl:10
+msgid "List of skills and level"
+msgstr ""
+
+#: templates/txt/skillset.tmpl:17
+#, python-format
+msgid "(Started using it %s year(s) ago)"
+msgstr ""
+

@@ -1,0 +1,47 @@
+#*
+-*- coding: UTF-8 -*-
+vim: ai ts=2 sts=2 et sw=2
+Copyright 2009 - Jorge A Gallegos (kad@blegh.net)
+*#
+## Import the filters and gettext modules for transformation/translation
+#from filters import text as f
+#from gettext import gettext as _
+
+$f.h2($_("Additional Information"))
+
+#if $varExists("projects")
+$f.h3($_("Personal/Side Projects"))
+
+  #for $project in $projects
+  * $_("%s for %s (<%s>): %s" % ($f.bold($project.name),
+                                 $f.emp($project.organization),
+                                 $project.web, $project.description))
+  #end for
+
+#end if
+#if $varExists("awards")
+$f.h3("Awards/Certifications received")
+
+  #for $award in $awards
+  * $_("During the %s on %s by %s for: %s" %($f.emp($award.event),
+                                               $award.date,
+                                               $f.bold($award.organization),
+                                               $award.for))
+  #end for
+
+#end if
+#if $varExists("hobbies")
+$f.h3(_("Personal Hobbies"))
+
+  #for $hobby in $hobbies
+  * $hobby
+  #end for
+
+#end if
+- - -
+#if $varExists("copyright")
+  $_("Copyright &copy; %(holder)s, %(year)s" % $copyright)
+#end if
+
+  $f.emp(_("Created with Resumey <https://launchpad.net/resumey>"))
+

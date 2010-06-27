@@ -1,0 +1,28 @@
+#*
+-*- coding: UTF-8 -*-
+vim: ai ts=2 sts=2 et sw=2
+Copyright 2009 - Jorge A Gallegos (kad@blegh.net)
+*#
+## Import the filters and gettext modules for transformation/translation
+#from filters import text as f
+#from gettext import gettext as _
+
+$_("Academics:")
+-----------------------
+
+#for $degree in $degrees
+  * $_("Level: %s" % $f.bold($degree.level))
+    * $_("School: %s" % $degree.school)
+#if "major" in $degree.keys()
+    * $_("Major: %s" % $degree.major)
+#end if
+#set $loc = ""
+#if "city" in $degree.keys()
+#set $loc += $degree.city + ", "
+#end if
+#if "state" in $degree.keys()
+#set $loc += $degree.state + ", "
+#end if
+#set $loc += $degree.country
+    * $_("Location: %s " % $loc)
+#end for
